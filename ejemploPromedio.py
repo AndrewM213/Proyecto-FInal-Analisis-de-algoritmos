@@ -4,15 +4,22 @@ from tkinter import messagebox, simpledialog, ttk
 from PIL import Image, ImageTk
 import random
 
-#Creamos una lista con carreras
 
 estudiantes = []
 Carreras = ["Ingeniería de Sistemas", "Ingenuería Civil", "Ingeniería de Software","Administración de Empresas", "Contabilidad", 
            "Marketing", "Derecho", "Medicina", "Arquitectura", "Psicología"]
 
 def generar_datos_random(start_id=101):
-    nombres_base = ["Ana Torres", "Carlos Ruiz", "Elena Gomez", "David Gil", 
-                    "Beatriz Lima", "Fernando Solis", "Gloria Mendez", "Hugo Chavez"]
+    nombres_base = ["Ana Torres", "Carlos Ruiz", "Elena Gomez", "David Gil", "Beatriz Lima",
+        "Fernando Solis", "Gloria Mendez", "Anthony Chavez", "Luisa Connor", "Miguel Silva",
+        "Sofia Diaz", "Ben Soto", "Juan Perez", "Maria Rodriguez", "Jose Garcia",
+        "Laura Martinez", "Miguel Hernandez", "Sofia Lopez", "Jorge Gonzalez", "Lucia Perez",
+        "Antonio Sanchez", "Paula Rivera", "Francisco Torres", "Andrea Ramirez", "Manuel Flores",
+        "Daniela Diaz", "Pedro Vasquez", "Carmen Castillo", "Alejandro Morales", "Veronica Reyes",
+        "Roberto Gomez", "Florinda Meza", "Ruben Aguirre", "Ramon Valdes", "Maria Medina",
+        "Luis Ulloa", "Cristia Jibaja", "Eduardo Molina", "Rodrigo Felix", "Sergio Ramos",
+        "Diana Prince", "Gerald Mendez", "Steven Dominguez", "Natasha Benites", "Wanda Maximoff",
+        "Walter Pariona", "Jesse Pinkman", "Andrew Morales", "Wilfredo Chiara", "Cecilia Rojas"]
 
     lista_nueva = []
 
@@ -140,8 +147,6 @@ def cmd_cambiar_datos():
 
 def cmd_reporte():
     if not estudiantes: return
-    
-    # 1. Estadísticas básicas
     mejor = max(estudiantes, key=lambda x: x['promedio'])
     peor = min(estudiantes, key=lambda x: x['promedio'])
     
